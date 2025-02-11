@@ -2,6 +2,8 @@
 
 React Emoji Picker 😍 : Simple and Flexible Fast Loading Emoji Picker ⚡.  
 
+Live Site: **<https://emojipicker.pages.dev/>**  
+
 ## Built tools
 
 - React + Vite ⚡  
