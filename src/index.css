@@ -37,18 +37,18 @@ body {
 }
 .textarea {
   font-family: "Anek Tamil", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   border: 2px solid #ff7eb3;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .input {
   font-family: "Anek Tamil", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   border: 2px solid #ff7eb3;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .input:focus {

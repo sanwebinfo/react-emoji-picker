@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, memo, lazy, Suspense, useDeferredValue, useTransition } from "react";
 import DOMPurify from "dompurify";
-import { FaSmile, FaTimes, FaClipboard, FaSearch } from "react-icons/fa";
+import { FaSmile, FaTimes, FaClipboard } from "react-icons/fa";
 import { init, SearchIndex } from "emoji-mart";
 import emojiData from "@emoji-mart/data";
 const Picker = lazy(() => import("@emoji-mart/react"));
@@ -91,7 +91,7 @@ const App = () => {
                 <button className="button has-background-dark is-medium" onClick={() => setShowPicker((s) => !s)}>
                   {showPicker ? <FaTimes /> : <FaSmile />}
                 </button>
-                <div className="control has-icons-left ml-3" style={{ flex: 1 }}>
+                <div className="control ml-3" style={{ flex: 1 }}>
                   <input
                     type="text"
                     className="input has-background-dark has-text-white"
@@ -99,19 +99,16 @@ const App = () => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   />
-                  <span className="icon is-small is-left">
-                    <FaSearch />
-                  </span>
                 </div>
               </div>
               {showPicker && <EmojiPicker onSelect={handleEmojiSelect} />}
               {isPending ? (
-                <div className="mt-2 hash-text-dark">
-                  <p>🔄 Searching...</p>
+                <div className="mt-2 has-text-dark">
+                  <p className="has-text-dark">🔄 Searching...</p>
                 </div>
               ) : (
                 searchResults.length > 0 && (
-                  <div className="mt-2">
+                  <div className="mt-2 has-text-dark">
                     {searchResults[0] === "No results" || searchResults[0] === "Error searching" ? (
                       <p>{searchResults[0]}</p>
                     ) : (
